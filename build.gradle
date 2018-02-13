@@ -33,11 +33,11 @@ ext {
     version = agronaVersion
 
     if (!project.hasProperty('ossrhUsername')) {
-        ossrhUsername = ''
+        ossrhUsername = 'jpwatson'
     }
 
     if (!project.hasProperty('ossrhPassword')) {
-        ossrhPassword = ''
+        ossrhPassword = '63b55c67-b5d5-4419-8162-4b09c79ba6d2'
     }
 }
 
@@ -168,11 +168,11 @@ project(':agrona') {
                     MavenDeployment deployment -> signing.signPom(deployment)
                 }
 
-                repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
+                repository(url: "https://www.myget.org/F/aeron/maven/") {
                     authentication(userName: ossrhUsername, password: ossrhPassword)
                 }
 
-                snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
+                snapshotRepository(url: "https://www.myget.org/F/aeron/maven/") {
                     authentication(userName: ossrhUsername, password: ossrhPassword)
                 }
 
@@ -271,11 +271,11 @@ project(':agrona-agent') {
                     MavenDeployment deployment -> signing.signPom(deployment)
                 }
 
-                repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
+                repository(url: "https://www.myget.org/F/aeron/maven/") {
                     authentication(userName: ossrhUsername, password: ossrhPassword)
                 }
 
-                snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
+                snapshotRepository(url: "https://www.myget.org/F/aeron/maven/") {
                     authentication(userName: ossrhUsername, password: ossrhPassword)
                 }
 
@@ -291,11 +291,11 @@ project(':agrona-agent') {
                     MavenDeployment deployment -> signing.signPom(deployment)
                 }
 
-                repository(url: "https://oss.sonatype.org/service/local/staging/deploy/maven2/") {
+                repository(url: "https://www.myget.org/F/aeron/maven/") {
                     authentication(userName: ossrhUsername, password: ossrhPassword)
                 }
 
-                snapshotRepository(url: "https://oss.sonatype.org/content/repositories/snapshots/") {
+                snapshotRepository(url: "https://www.myget.org/F/aeron/maven/") {
                     authentication(userName: ossrhUsername, password: ossrhPassword)
                 }
 
